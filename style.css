@@ -1,3 +1,227 @@
+h1 {
+    font-family: Candal;
+    font-size: 36px;
+    color: white;
+}
+
+h2 {
+    font-family: Candal;
+    font-size: 26px;
+}
+
+h3 {
+    font-family: Candal;
+    font-size: 18px;
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
 body {
-    background: blue;
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr 7fr 2fr ;
+    grid-template-rows: 2vh 60px 80vh 60px 2vh;
+    grid-template-areas: "a a a a"
+                         "b b b b"
+                         "c c c c"
+                         "d d d d"
+                         "e e e e";
+    column-gap: 15px;
+    min-height: 700px;
+    height: 100vh;
+    min-width: 1000px;
+    background-color: #dbb95f;
+    /*background-image: url(images/dhaulaghiri-background.JPG);
+    background-size: cover;*/
+}
+
+.top-whitespace {
+    height: 15px;
+    grid-area: a;
+}
+
+.top-ribbon {
+    height: 50px;
+    grid-area: b;
+    background-color: #537636;
+    z-index: 0;
+}
+
+.featured-pic-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    grid-area: 1/2/6/3;
+    z-index: 2;
+    width: 300px;
+    height: 100vh;
+    object-fit: cover;
+    border-left: 20px solid #422e13;
+    border-right: 20px solid #422e13;
+    align-items: center;
+}
+
+.featured-pic-container img {
+    height: 100%;
+    min-height: 800px;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-area: 3/3;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-width: 700px;
+    width: 100%;
+    row-gap: 10px;
+    overflow: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 50px 50px 50px 50px;
+    border: 5px solid #7f5f16;
+}
+
+.badge {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: white;
+    /*box-shadow: -5px 0px 10px -5px inset black;*/
+}
+
+.card-pic {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.card-pic img {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 40px;
+    grid-area: 2/3/3/4;
+    z-index: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    padding-left: 40px;
+    grid-area: 4/3/5/4;
+    z-index: 1;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.nav-button img {
+    max-height: 30px;
+    object-fit: contain;
+}
+
+.bottom-ribbon {
+    height: 50px;
+    grid-area: d;
+    background-color: #537636;
+}
+
+.bottom-whitespace {
+    height: 15px;
+    grid-area: e;
+}
+
+.info-board {
+    display: flex;
+    grid-area: 3/3;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    z-index: 0;
+}
+
+.tab-window {
+    min-width: 30%;
+}
+
+.info-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 70%;
+    background-color: white;
+    border-radius: 0px 50px 50px 0px;
+    border-top: 5px solid  #7f5f16;
+    border-right: 5px solid  #7f5f16;
+    border-bottom: 5px solid  #7f5f16;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.info-header {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+}
+
+.exit-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    margin: 25px;
+}
+
+.exit-button img {
+    height: 100%;
+}
+
+.info-pic {
+    object-fit: contain;
+    flex-grow: 3;
+    text-align: center;
+}
+
+.info-pic img {
+    width: 80%;
+}
+
+.info {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 5;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 2;
+    column-gap: 20px;
 }
